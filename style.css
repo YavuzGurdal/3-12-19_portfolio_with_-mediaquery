@@ -17,6 +17,7 @@ body {
     /* position: sticky; bu navbarın yukarda kalmasını sağlıyor
     top da yukarda durduğunda ne kadar mesafede duracağını ayarlıyor  */
     font-size: 1.4vw;
+    z-index: 1000;
 }
 
 .navbar a {
