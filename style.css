@@ -11,13 +11,14 @@ body {
 .navbar {
     overflow: hidden;
     background: #253b6e;
-    margin-top: 30px;
+    /* margin-top: 30px; */
     position: sticky;
     top: 0;
     /* position: sticky; bu navbarın yukarda kalmasını sağlıyor
     top da yukarda durduğunda ne kadar mesafede duracağını ayarlıyor  */
     font-size: 1.4vw;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .navbar a {
@@ -175,6 +176,7 @@ caption {
     text-shadow: 2px 2px 4px #000000;
     width: 100%; 
     height: 100%;  
+    z-index: -1;
 }
 
 .part3 h1 {
@@ -189,21 +191,21 @@ caption {
  
 .part3 p {
     width: 100%;
-    font-size: 2vw;
+    font-size: 2.2vw;
     text-align: center;
     color: #d2ecf9;
     font: bold;
     font-family: 'Charm', cursive;
+    z-index: 100;
 }
  
  /* 4.Part My Projects(4. foto) div4 */
  /* başlık */
 #myprojects {
     font-family: 'Yellowtail', cursive;
-    height: 20%;
-    font-size: 8vw;
+    font-size: 6vw;
     text-align: center;
-    padding: 3.5% 2% 0 2%;
+    padding: 2rem;
     letter-spacing: 1px; /* harfler arasındaki boşlukları belirlememize yarar */
     color: #253b6e;
     text-shadow: 0px 0px 56px -4px rgba(0,0,0,1);
@@ -211,54 +213,42 @@ caption {
 .part4-outer-box {  
     width: 33.3%;
     float: left;
-    height: 100%;
 }
 
 .column {
     margin: 2% 10% 10% 10%;
-    padding: 0;
-    height: 380px;
-    border: solid 5px;
-    border-radius: 30px;
+    padding: 10px;
+    height: 480px;
+    border: solid 2px;
+    border-radius: 15px;
     box-shadow: 0px 0px 56px -4px rgba(0,0,0,1);
 }
 
 .part4-outer-box h2 {
-    width: 100%;
-    height: 15%;
+    padding: 10px;
     text-align: center;
-    font-size: 1.8vw;
-    line-height: 10vh;
-    /* padding-top: 10%; */
 }
 
 .part4-outer-box img {
     width: 100%;
-    height: 58%;
+    height: 65%;
+    padding: 10px;
 }
 
 .part4-outer-box p {
-    width: 100%;
-    height: 15%;
+    padding: 10px;
     text-align: center;
-    font-size: 1.8vw;
-    padding: 0 3% 0 3%;
-    line-height: 10vh;
-
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 
 .part4-outer-box h3 {
-    width: 100%;
-    height: 12%;
+    padding: 10px;
     text-align: center;
-    font-size: 1.8vw;
-    line-height: 3vh;
-    border-radius: 0 0 25px 25px;
-    padding-top: 5%;
     color: #d2ecf9;
+    margin: 10px; 
+    cursor: pointer;
 }
 
 
@@ -269,21 +259,24 @@ caption {
     position: fixed;
     left: 92%;
     top: 82%; 
-    /* bu ne kadr boşluk olacağını gösterir */
+    /* bu ne kadar boşluk olacağını gösterir */
     width: 60px;
     height: 60px; 
+    
+    font-size: 4vw;
+    
     /* yukardakiler oluşturduğumuz kutunun ölçüleri */
  
     /* position: fixed;  */
-    /* bu sayfada sabit kalır. pozisyonunu veririz orda kalır.bunu kullandıktan sonra sağ sol alt üst değerler vermeliyiz sağ üst veya sol alt değerler ayrı ayrı kullanılabilir */
+    /* bu sayfada sabit kalır. pozisyonunu veririz orda kalır.bunu kullandıktan sonra sağ sol alt üst değerler 
+    vermeliyiz. sağ üst veya sol alt değerler ayrı ayrı kullanılabilir */
     
     /* position:absolute; */
     /* bu sayfayı alta doğru çekersek bu yukarda kalır */
  } 
  
  #basadonikon i{
-    color: #253b6e;
-    font-size: 4vw;
+    color: #1891ac;
  }
 
  @media screen and (max-width: 600px) {
@@ -320,44 +313,54 @@ caption {
         clip-path: none ;
     }
 
+    .th-left, .td-left, .td-mittel, .td-right, .th-top {
+        font-size: 4vw;
+    }
+    
     .part3 h1 {
         font-size: 6vh;
     }
 
     .part3 p {
-        font-size: 3.7vw;
+        font-size: 3.6vw;
+    }
+
+    /* Part 4 */
+    #myprojects {
+        font-size: 8vw;
+        padding: 1rem;
     }
 
     .part4-outer-box {  
-        width: 100%;
-        float: left;
-        height: 100%;
+        /* width: 80%; */
+        display: block;
+        height: 410px;
+        padding: 10px 60px 10px;
+        margin-top: 0;
+        margin-bottom: 15px;
     }
 
     .column {
-        height: 40vh;
+        height: 400px;
         margin: 0;
         padding: 0;
-        width: 100%;
-    }
+    }    
 
-    .th-left, .td-left, .td-mittel, .td-right, .th-top {
+    .column > h2 {
         font-size: 4vw;
     }
 
-    .column > h2 {
-        font-size: 4.5vw;
-        line-height: 5vh;
+    .part4-outer-box img {
+        height: 250px;
+        padding: 0 10px 0;
     }
 
     .column > p {
-        font-size: 4.5vw;
-        line-height: 5vh;
+        font-size: 3vw;
+        padding-bottom: 0;    
     }
     .column > h3 {
-        font-size: 4.5vw;
-        line-height: 4vh;
-        padding: 0;
+        font-size: 3.5vw;
     }
    
 }
